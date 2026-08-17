@@ -1,0 +1,48 @@
+name: Report
+description: Report unexpected behavior with a minimal, runnable example.
+title: "[report] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Reports need to be reproducible. Issues without runnable code and actual observed output cannot be triaged and will be closed.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What did you observe?
+      description: One or two sentences. State the behavior, not an interpretation of it.
+    validations:
+      required: true
+  - type: textarea
+    id: minimal-example
+    attributes:
+      label: Minimal example
+      description: Self-contained, runnable as-is. A handful of lines — no repository links, no pseudocode.
+      render: python
+    validations:
+      required: true
+  - type: textarea
+    id: observed-output
+    attributes:
+      label: Observed output
+      description: Paste the actual output of running the example above, unedited.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What you expected instead, and why (a doc reference helps).
+    validations:
+      required: true
+  - type: textarea
+    id: setup
+    attributes:
+      label: Setup
+      description: Exact package versions, Python version, OS, and how you installed.
+      placeholder: |
+        kyvvu-engine 0.8.0 (pip install kyvvu-engine)
+        Python 3.12.4, macOS 15.5
+    validations:
+      required: true
