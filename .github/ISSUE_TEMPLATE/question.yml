@@ -1,0 +1,21 @@
+name: Question / request
+description: Ask a question or request a feature.
+title: "[question] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Reporting unexpected behavior? Use the **Report** form instead — it asks for the details we need to reproduce.
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question or request
+    validations:
+      required: true
+  - type: input
+    id: context
+    attributes:
+      label: Where did this come up?
+      description: Optional — a docs page, package name, or platform.kyvvu.com.
+    validations:
+      required: false
